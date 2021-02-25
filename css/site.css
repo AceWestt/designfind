@@ -1,0 +1,1236 @@
+html,
+body {
+    height: auto;
+    min-height: 100%;
+    background: #000000;
+    color: #ffffff;
+    font-family: TTNorms, sans-serif;
+}
+
+@font-face {
+    font-family: 'TTNorms';
+    src: url('../fonts/tt-norms/TTNorms-Regular.otf');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'TTNorms';
+    src: url('../fonts/tt-norms/TTNorms-Bold.otf');
+    font-weight: bold;
+}
+
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+}
+
+.footer {
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+    padding: 15px;
+    border: none;
+}
+
+@media(max-width:767px) {
+    .nav li > form > button.logout {
+        display:block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 15px;
+    }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
+
+
+
+/*MY ADJUSTMENTS ACEWESTT*/
+
+/*********Layout********/
+
+.hidden{
+    display: none;
+}
+
+.main{
+    height: auto;
+    width: 100%;
+    margin: auto;
+    padding: 8.5vw 8vw;
+    float: left;
+}
+
+.main *{
+    float: left;
+}
+
+.main .navd{
+    width: 100%;
+    height: 6.7vw;
+}
+
+.main .navd > a{
+    height: inherit;
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+.main .navd a img{
+    height: inherit;
+    float: left;
+}
+
+.main .navd h5{
+    height: inherit;
+    float: left;
+    font-size: 5.5vw;
+    margin: 0 0 0 1.7vw;
+    font-family: 'TTNorms', sans-serif;
+    font-weight: bold;
+    color: white;
+
+}
+
+.main .navd .menu-button{
+    height: inherit;
+    float: right;
+    padding: 0.8vw;
+}
+
+.main .navd .menu-button svg{
+    height: 100%;
+    float: right;
+
+}
+
+.text-danger{
+    color:red;
+}
+
+footer{
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 13.3vw 7.98vw;
+    background: #0D0D0D;
+    position: relative;
+}
+
+footer *{
+    float: left;
+}
+
+footer .logo{
+    width: 7.98vw;
+    padding: 0;
+    margin: 0;
+}
+
+footer .logo img{
+    width: 100%;
+}
+
+footer .social{
+    float: right;
+    width: 3.99vw;
+    margin-top: 1.33vw;
+}
+
+footer .social img{
+    width: 100%;
+}
+
+footer .link{
+    width: 100%;
+    text-align: left;
+    color: #9E9E9E;
+    font-size: 3.192vw;
+    margin-top: 6.56vw;
+}
+
+footer .link.first{
+    margin-top: 14.63vw;
+}
+
+footer .copy{
+    margin-top: 26.6vw;
+    font-size: 2.128vw;
+    color: #9E9E9E;
+}
+
+.navigation{
+    width:0;
+    height: 0;
+    position: fixed;
+    z-index: 100;
+    top:0;
+    right:0;
+    background: #000000;
+    transition: all 1s;
+    overflow: hidden;
+    opacity: 0;
+    border-radius: 0 0 0 500px;
+}
+
+.navigation.active{
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.95;
+    border-radius: 0;
+}
+
+.navigation .closeButton{
+    color: white;
+    font-weight: normal;
+    font-size: 15vw;
+    padding-top: 0;
+    float: right;
+    text-align: right;
+    padding-right: 5.32vw;
+    transition: all 0.5s linear;
+}
+
+.navigation .closeButton.active{
+    transform: rotate(360deg);
+}
+
+.navigation .link-block{
+    float: left;
+    width: 100%;
+    padding: 13.3vw 7.98vw;
+    border-bottom: 0.266vw solid #464646;
+}
+
+.navigation .link-block .link-item{
+    width: 100%;
+    margin-bottom: 13.3vw;
+    font-size: 4.256vw;
+    font-weight: bold;
+    color: darkgrey;
+}
+
+.navigation .link-block .link-item a{
+    color: white;
+}
+
+.navigation .link-block.social{
+    border-bottom: transparent;
+}
+
+.navigation .link-block.social .link-item a{    position: relative;
+    width: 6.65vw;
+
+    display: block;
+    height: auto;
+}
+
+.navigation .link-block.social .link-item a img{
+    width: 100%;
+    float: left;
+}
+
+
+/***********Main page*********/
+
+.main .header{
+    width: 100%;
+    margin-top: 10.7vw;
+    float: left;
+    padding: 0 13.3vw;
+}
+.main .header .header-img{
+    float: left;
+    width: 100%;
+}
+
+.main .header h1{
+    font-weight: bold;
+    font-size: 5.4vw;
+    text-align: center;
+    width: 100%;
+    margin-top: 8vw;
+    float: left;
+}
+
+.main .header h6{
+    width: 100%;
+    text-align: center;
+    float: left;
+    margin-top: 4vw;
+    font-size: 3.2vw;
+    margin-bottom: 0;
+}
+
+.main .addVac{
+    width: 100%;
+    float: left;
+    margin-top: 10.7vw;
+    background: #EB5757;
+    border: none;
+    color: white;
+    height: 16vw;
+    font-weight: bold;
+    font-size: 3.7vw;
+    display:flex;
+}
+
+.main .addVac p{
+    text-align: center;
+    margin: auto;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 5.32vw;
+    margin-top: 13.3vw;
+    float: left;
+}
+
+.vacancy-container{
+    width: 100%;
+    padding: 0;
+    margin-top: 2.218vw;
+}
+
+.vacancy-container .vacancy-item{
+    width: 100%;
+    position: relative;
+    height: auto;
+    padding: 2.66vw;
+    background: #121212;
+    border-radius: 0.798vw;
+    margin-bottom: 5.32vw;
+}
+
+.vacancy-container .vacancy-item:hover{
+    border: 0.532vw solid #27AE60;
+}
+
+.vacancy-container .vacancy-item a,
+.vacancy-container .vacancy-item a:hover,
+.vacancy-container .vacancy-item a:active,
+.vacancy-container .vacancy-item a:focus{
+    color: white;
+}
+
+.vacancy-container .vacancy-item .header{
+    font-weight: normal;
+    font-size: 2.66vw;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.vacancy-container .vacancy-item .header .header-busy-type{
+    color: #BB6BD9;
+}
+
+.vacancy-container .vacancy-item .header .header-busy-type .img{
+    width: 9.842vw;
+    margin: 1.35vw 1.862vw 0;
+}
+
+.vacancy-container .vacancy-item .header .header-minwage{
+    float: right;
+    color: #27AE60;
+}
+
+.vacancy-container .vacancy-item .img-wrp{
+    width: 78.3vw;
+    height: 53.2vw;
+    margin-top: 2.66vw;
+    padding: 0;
+}
+
+.vacancy-container .vacancy-item .img-wrp img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vacancy-container .vacancy-item .date{
+    width: 100%;
+    color: #7E7E7E;
+    margin-top: 2.66vw;
+    font-size: 2.128vw;
+}
+
+.vacancy-container .vacancy-item h3{
+    margin: 0.532vw 0 0 0;
+    width: 100%;
+    font-weight: bold;
+    font-size: 4.256vw;
+    line-height: 5.054vw;
+}
+
+.btn.showAll{
+    border:0.532vw solid #27AE60;
+    width: 100%;
+    border-radius:1.064vw;
+    font-size: 3.724vw;
+    font-weight: bold;
+    padding: 5.32vw 0;
+    color: white;
+}
+
+.btn.showAll:hover{
+    background: #27AE60;
+}
+
+h2.about{
+    margin-top: 3.99vw;
+}
+
+p.about{
+    width: 100%;
+    font-size: 3.724vw;
+    line-height: 4.522vw;
+    padding: 0;
+    margin-top: 3.99vw;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.tg-wrp{
+    position: relative;
+    margin: 0;
+    padding: 0 3.458vw;
+    width: 100%;
+    margin-top: 11.97vw;
+}
+
+.tg-wrp img{
+    width: 100%;
+}
+
+.tg-wrp .btn{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top:23.674vw;
+    left: 0;
+    background: #2F80ED;
+    color: white;
+    padding: 5.32vw 0;
+    font-size: 3.724vw;
+    font-weight: bold;
+    border-radius: 1.064vw;
+}
+
+.tg-wrp .btn:hover{
+    background: transparent;
+    border: 0.532vw solid #2F80ED;
+}
+
+
+/*********************ADD PAGE**********/
+
+.main .header.vacancy{
+    padding:  0 0;
+}
+
+.main .header.vacancy h1{
+    text-align: left;
+    margin: 0;
+}
+
+.mainContainer{
+    width: 100%;
+    height: auto;
+    padding: 0 0;
+    margin: 0 0;
+    float: left;
+}
+
+.mainContainer.vacancy{
+    margin-top: 0;
+}
+
+#addForm{
+    margin: 0 0;
+    padding: 0 0;
+    width: 100%;
+    float: left;
+}
+
+#addForm .label{
+    font-size: 3.192vw;
+    color: white;
+    font-weight: 100;
+    text-align: left;
+    width: 100%;
+    float: left;
+    margin-top: 8vw;
+}
+
+#addForm .input, .vacancies-wrp input, .vacancies-wrp .input{
+    float: left;
+    width: 100%;
+    margin-top: 2.66vw;
+    height: 14.63vw;
+    border-radius: 0.798vw;
+    padding-left: 4.788vw;
+    color: #1a1a1a;
+    border: transparent;
+    font-weight: bold;
+    font-size: 3.733vw;
+}
+
+#addForm textarea.input{
+    padding-top: 3.99vw;
+    height: 47.88vw;
+    resize: none;
+}
+
+#addForm .input.select, .vacancies-wrp .input.select{
+    background: white;
+    display: flex;
+    position: relative;
+}
+
+#addForm .input.select .selected, .vacancies-wrp .input.select .selected{
+    margin: auto;
+    margin-left: 0;
+}
+#addForm .input.select .icon, .vacancies-wrp .input.select .icon{
+    margin: auto;
+    margin-right: 6.118vw;
+    width: 4.256vw;
+    transition: all 0.3s linear;
+    z-index: 3;
+}
+#addForm .input.select .icon img, .vacancies-wrp .input.select .icon img{
+    width: 100%;
+    float: left;
+}
+
+#addForm .input.select .icon.active, .vacancies-wrp .input.select .icon.active{
+    transform: rotate(180deg);
+}
+
+#addForm .input::placeholder,
+#addForm .input.select,
+.vacancies-wrp input::placeholder,
+.vacancies-wrp .input.select{
+    font-weight: bold;
+    color: #A4A4A4;
+    font-size: 3.733vw;
+}
+
+#addForm .input.select .cat-wrp, .vacancies-wrp .input.select .cat-wrp{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top:0;
+    left: 0;
+    background: white;
+    display: none;
+    float: left;
+    border-radius: 0.798vw;
+    z-index: 2;
+}
+
+#addForm .input.select#busyType .cat-wrp{
+    z-index: 4;
+}
+
+#addForm .input.select#busyType .icon{
+    z-index: 5;
+}
+
+#addForm .input.select#exp .cat-wrp{
+    z-index: 6;
+}
+
+#addForm .input.select#exp .icon{
+    z-index: 7;
+}
+
+#addForm .input.select#category .cat-wrp{
+    z-index: 8;
+}
+
+#addForm .input.select#category .icon{
+    z-index: 9;
+}
+
+#addForm .input.select .option, .vacancies-wrp .input.select .option{
+    display: flex;
+    position: relative;
+    height: 14.63vw;
+    padding-left: 4.788vw;
+    width: 100%;
+    float: left;
+    border-bottom: 0.266vw solid #D6D6D6;
+    color: #000;
+}
+
+#addForm .input.select .option:first-child,
+.vacancies-wrp .input.select .option:first-child{
+    border-radius: 0.798vw 0.798vw 0 0;
+}
+
+#addForm .input.select .option:last-child,
+.vacancies-wrp .input.select .option:last-child{
+    border-radius: 0 0 0.798vw 0.798vw;
+
+}
+
+#addForm .input.select .option .title,
+.vacancies-wrp .input.select .option .title{
+    margin: auto;
+    margin-left: 0;
+}
+
+.lilLabel{
+    width: 100%;
+    float: left;
+    text-align: left;
+    font-size: 2.66vw;
+    color: white;
+    font-weight: normal;
+}
+
+.file-wrp{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin-top: 2.66vw;
+}
+
+.file-wrp .uploadFile{
+    background: #27AE60;
+    font-weight: bold;
+    font-size: 3.724vw;
+    color: white;
+    padding: 3.99vw 7.98vw;
+    width: auto;
+    height: auto;
+    border: transparent;
+}
+
+.file-wrp .uploadFile:hover{
+    background: transparent;
+    border: 0.532vw solid #27AE60;
+}
+
+.file-wrp input[type=file]{
+    font-size: 26.6vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.form.vacancy input[type=submit]{
+    width: 100%;
+    margin-top:7.98vw;
+    background: #2F80ED;
+    color: white;
+    font-weight: bold;
+    padding: 5.32vw 0;
+    text-align: center;
+    font-size: 3.724vw;
+}
+
+.form.vacancy input[type=submit]:hover{
+    background: transparent;
+    border: 0.532vw solid #2F80ED;
+}
+
+.form.vacancy .img{
+    width: 77.14vw;
+    height:53.2vw;
+    object-fit: cover;
+    margin-left: 3.458vw;
+    margin-top: 5.32vw;
+    display: none;
+}
+
+.mySuccess{
+    display: none;
+    position: relative;
+    width: 100%;
+    border: 0.266vw solid white;
+    background: black;
+    padding: 5.32vw;
+    margin-top: 5.32vw;
+}
+
+.mySuccess *{
+    width: 100%;
+    text-align: left;
+}
+
+.mySuccess .btn{
+    background: green;
+    color: white;
+    padding: 2.66vw 3.99vw;
+    width: auto;
+}
+
+.mySuccess .btn.govacancy{
+    margin-top: 5.32vw;
+    background: #2F80ED;
+}
+
+#contactModal.addModel .modal-dialog{
+    height: 81.13vw;
+}
+
+#contactModal.addModel .modal-dialog img {
+    width: 15.162vw;
+    position: absolute;
+    top:13.3vw;
+    left: 35.378vw;
+}
+
+#contactModal.addModel .modal-dialog .contact{
+    top:29.26vw;
+}
+
+#contactModal.addModel .modal-dialog .lilLabel{
+    top:39.9vw;
+}
+
+#contactModal.addModel .modal-dialog .btn.closeModal{
+    top:56.924vw;
+}
+
+/**************VACANCY PAGE**********/
+.vacancies-wrp, .full-wrp{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.vacancies-wrp .extended-wrp, .extended-wrp .checkboxBlock, .extended-wrp .checkboxBlock .item{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.vacancies-wrp .extended-wrp{
+    margin-top: 13.3vw;
+    display: none;
+}
+
+.vacancies-wrp .extended-wrp .checkboxBlock .item{
+    position: relative;
+    margin-bottom: 4.522vw;
+}
+
+.vacancies-wrp .extended-wrp .checkboxBlock .item .checkbox-custom{
+    width: 4.788vw;
+    margin: 0;
+}
+
+.vacancies-wrp .extended-wrp .checkboxBlock .item .label{
+    margin-left: 3vw;
+    font-size: 3.724vw;
+    text-align: left;
+    font-weight: bold;
+}
+
+.vacancies-wrp .extended-wrp .checkboxBlock .item.active .label{
+    color: #27AE60;
+}
+
+.vacancies-wrp .extended-wrp hr{
+    border-top: 0.266vw solid #262626;
+    width: 100%;
+    float: left;
+    margin-top: 7.98vw;
+}
+
+.vacancies-wrp .btn.findVacancy{
+    background: #2F80ED;
+    width: 100%;
+    padding:5.586vw 0;
+    position: relative;
+    display: flex;
+    align-content: center;
+    margin-top: 7.98vw;
+    cursor: pointer;
+}
+
+.vacancies-wrp .btn.findVacancy:hover{
+    background: transparent;
+    border: 0.532vw solid #2F80ED;
+}
+
+.vacancies-wrp .btn.findVacancy img{
+    width: 4.788vw;
+    height: 4.788vw;
+    margin: auto;
+    margin-right: 0;
+}
+
+.vacancies-wrp .btn.findVacancy.active img{
+    animation: activeButton 1.5s linear infinite;
+}
+
+.vacancies-wrp .btn.findVacancy span{
+    margin: auto;
+    margin-left: 2.66vw;
+    font-weight: bold;
+    font-size: 3.724vw;
+}
+
+.vacancies-wrp .extWrpOpener{
+    width: 100%;
+    text-align: center;
+    font-size: 3.724vw;
+    margin-top: 5.32vw;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+.vacancies-wrp h3{
+    font-size: 5.32vw;
+    font-weight: bold;
+    margin-top: 5.32vw;
+}
+
+.vacancies-wrp h3 span{
+    float: none;
+}
+
+.vacancies-wrp .vacancy-results{
+    margin: 0;
+    margin-top: 5.32vw;
+    width: 100%;
+    padding: 0;
+}
+.vacancies-wrp .vacancy-results a{
+    color: white;
+}
+
+.vacancies-wrp .vacancy-results .result-item{
+    width: 100%;
+    padding: 3.192vw 2.66vw;
+    background: #121212;
+    border-radius: 0.798vw;
+    margin: 0;
+    margin-bottom: 5.32vw;
+    cursor: pointer;
+}
+
+.vacancies-wrp .vacancy-results .result-item:hover{
+    border: 0.532vw solid #27AE60;
+}
+
+.vacancies-wrp .vacancy-results .result-item .header-busy-type,
+.full-wrp .header-city-time{
+    margin: 0;
+    padding: 0;
+    color: #BB6BD9;
+    font-size: 2.66vw;
+    font-weight: normal;
+}
+
+.vacancies-wrp .vacancy-results .result-item .header-busy-type .img,
+.full-wrp .header-city-time img{
+    width: 9.842vw;
+    margin: 0 2.128vw;
+    margin-top: 1.33vw;
+}
+
+.vacancies-wrp .vacancy-results .result-item h2{
+    margin: 0;
+    margin-top: 5.32vw;
+    font-size: 4.788vw;
+    line-height: 7.182vw;
+}
+
+.vacancies-wrp .vacancy-results .result-item .date{
+    width: 100%;
+    color: #7E7E7E;
+    margin-top: 2.66vw;
+    font-size: 2.128vw;
+}
+
+.vacancies-wrp .vacancy-results .result-item p{
+    width: 100%;
+    font-size: 3.192vw;
+    line-height: 4.788vw;
+    margin: 0;
+    margin-top: 5.32vw;
+}
+
+.vacancies-wrp .vacancy-results .result-item .price{
+    background: #27AE60;
+    color: white;
+    padding: 0.798vw 1.862vw;
+    font-weight: normal;
+    font-size: 2.66vw;
+    margin: 5.32vw 0 3.192vw 0;
+}
+
+.vacancies-wrp .btn.showMore{
+    width: 100%;
+    font-size: 3.724vw;
+    padding: 5.32vw;
+    border: 0.532vw solid #27AE60;
+    cursor: pointer;
+    margin-top: 15.96vw;
+}
+.vacancies-wrp .btn.showMore:hover{
+    background: #27AE60;
+}
+
+.vacancies-wrp .btn:hover, .vacancies-wrp .btn:active,
+.vacancies-wrp .btn:focus, .vacancies-wrp .addnew-wrp .btn.addMore:hover,
+.vacancies-wrp .addnew-wrp .btn.addMore:active,
+.vacancies-wrp .addnew-wrp .btn.addMore:focus{
+    color: white;
+}
+
+.vacancies-wrp .addnew-wrp{
+    width: 100%;
+    position: relative;
+    margin: 0;
+    margin-top: 21.28vw;
+}
+
+.vacancies-wrp .addnew-wrp img{
+    position: relative;
+    width: 100%;
+}
+
+.vacancies-wrp .addnew-wrp .btn.addMore{
+    width: 100%;
+    background: #EB5757;
+    border-radius: 1.33vw;
+    font-size: 3.724vw;
+    padding: 5.852vw;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    top: 30.856vw;
+    left: 0;
+    color: white;
+}
+
+.vacancies-wrp .addnew-wrp .btn.addMore:hover{
+    background: transparent;
+    border: 0.532vw solid #EB5757;
+}
+
+/****************FULL VACANCY PAGE****************/
+
+.full-wrp .header-city-time{
+    margin-top: 11.97vw;
+}
+
+.full-wrp h2{
+    font-size: 4.788vw;
+    font-weight: bold;
+    line-height: 7.182vw;
+    margin-top: 5.32vw;
+    margin-bottom: 0;
+}
+
+.full-wrp > img{
+    width: 100%;
+    height: 53.2vw;
+    object-fit: cover;
+    margin-top: 5.32vw;
+}
+
+.full-wrp .tags{
+    width: 100%;
+    padding: 0;
+    margin: 3.99vw 0 0 0;
+}
+
+.full-wrp .tags .item{
+    font-size: 2.66vw;
+    font-weight: bold;
+    margin: 0 0 0 1.33vw;
+    background: #EB5757;
+    padding: 0.798vw 1.596vw;
+}
+
+.full-wrp p{
+    width: 100%;
+    margin: 3.99vw 0 0 0;
+    font-size: 3.458vw;
+    line-height: 5.32vw;
+    font-weight: normal;
+}
+
+.full-wrp p .strong{
+    float: none;
+    font-weight: bold;
+}
+
+.full-wrp .btn.showContact{
+    font-size: 3.724vw;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    border-radius: 1.33vw;
+    background: #27AE60;
+    padding: 5.719vw 0;
+    margin: 13.3vw 0 0 0;
+    cursor: pointer;
+}
+
+.full-wrp .btn.goALL{
+    width: 100%;
+    padding: 5.32vw 0;
+    border-radius: 1.064vw;
+    border: 0.532vw solid #27AE60;
+    margin: 5.32vw 0 0 0;
+    display: flex;
+    align-content: center;
+    color: white;
+    font-size: 3.724vw;
+    font-weight: bold;
+}
+
+.full-wrp .btn.goALL *{
+    margin: 0 auto;
+}
+
+.full-wrp .btn.goALL img{
+    margin-right: 1.33vw;
+    width: 4.256vw;
+}
+
+.full-wrp .btn.goALL div{
+    margin-left: 1.33vw;
+}
+
+#contactModal > .modal-dialog{
+    width: 86vw;
+    height: 64.372vw;
+    left: 4.5vw;
+    top:50vw;
+    background: #1D1D1D;
+    padding: 0;
+    position: relative;
+}
+
+#contactModal > .modal-dialog > button{
+    position: absolute;
+    color: white;
+    background: transparent;
+    border: transparent;
+    padding: 0 0;
+    height: auto;
+    font-size:7.5vw;
+    top:4.5vw;
+    right:7.98vw;
+    font-weight: normal;
+}
+
+#contactModal .modal-dialog .lilLabel{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    top:21.812vw;
+    font-size: 3.724vw;
+}
+
+#contactModal .modal-dialog .contact{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    font-size: 5.32vw;
+    top:27.93vw;
+    left: 0;
+}
+
+#contactModal .modal-dialog .btn.closeModal{
+    width: 55.062vw;
+    position: absolute;
+    top: 42.56vw;
+    left: 14.63vw;
+    font-size: 3.724vw;
+    font-weight: bold;
+    padding: 5.582vw 16vw;
+    background: #27AE60;
+    border-radius: 1.33vw;
+    color: white;
+}
+
+.full-wrp h3{
+    margin-top: 14.63vw;
+    width: 100%;
+    text-align: left;
+    font-size: 5.32vw;
+    font-weight: bold;
+}
+
+.full-wrp .vacancies-wrp{
+    margin-top: 5vw;
+}
+
+.full-wrp .vacancies-wrp a.showMore{
+    color: white;
+    margin-top: 1.33vw;
+}
+
+    /*************************ADMIN PAGE***************************/
+.container.admin{
+    margin: 0;
+    width: 100%;
+    padding: auto;
+    min-width: 0;
+}
+
+.container.admin h3{
+    width: 100%;
+    font-weight: bold;
+}
+
+.container.admin table{
+
+}
+
+.container.admin table.vac tbody tr td .btn{
+    /*background: grey;*/
+    width: 100px;
+    border-radius: 3px;
+    padding: 5px 0;
+    text-align: center;
+    color: white;
+    background: #06a360;
+}
+
+.container.admin table tbody tr td .btn.confirm{
+    background: #06a360;
+}
+
+.container.admin table tbody tr td .btn.delete{
+    background: #a32b31;
+    margin-top: 15px;
+}
+
+.deleteCat, #cancelEditCat{
+    margin-left: 10px;
+}
+
+#saveCat, #cancelEditCat{
+    margin-top: 15px;
+}
+
+#deleteModal .modal-dialog{
+    color:black;
+}
+
+#photoModal .modal-dialog{
+    padding: 0;
+    width: 1200px;
+}
+
+#photoModal .modal-dialog img{
+    width: 100%;
+    margin: 0;
+}
+
+
+/************SOME OTHER STUFF*******/
+
+@keyframes activeButton {
+    from, to{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(60deg);
+    }
+}
+
